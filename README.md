@@ -19,4 +19,4 @@ Whether you're a seasoned Potterhead or just embarking on your journey into the 
 
 Prepare to be spellbound as you explore the pages of our Harry Potter website. The magic awaits!
 
-Note:This is a static website created using html and css
+Note:This is a static website created using HTML and CSS
