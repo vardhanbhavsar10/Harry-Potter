@@ -1,0 +1,286 @@
+/* #imgstyle{
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale:30%;
+    
+} */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Other header styles here */
+}
+
+.brand-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Other icon container styles here */
+}
+
+.brand-icon img {
+    max-width: 100%;
+    height: auto;
+    top: 10%;
+    left: 50%;
+    /* Other icon styles here */
+}
+
+.scrollable-images {
+    height: 400px;
+    /* set the height of the scrollable area */
+    overflow-y: auto;
+    /* enable horizontal scrolling if necessary */
+    white-space: nowrap;
+    /* prevent images from wrapping */
+}
+
+.scrollable-images img {
+    height: 100%;
+    /* set the height of the images to fill the scrollable area */
+    display: inline-block;
+    /* display images in a row */
+    margin-right: 10px;
+    /* add some margin between images */
+}
+
+#bgimg1 {
+    /* background-image: url("hall.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale: 100%;
+    height: 100vh;
+    width: auto;
+    background-attachment: fixed;
+    background-position: center;
+    text-decoration-color: white;
+    filter: blur(2px);
+}
+
+#bgimg2 {
+    /* background-image: url("hogwarts-desktop-tog8hmgg1vx5zppb.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale: 100%;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    text-decoration-color: white;
+    filter: blur(2px);
+}
+
+@font-face {
+    font-family: 'HarryPotter';
+    src: url('../harry_p/WizardWorldSimplified-Kxr7.ttf') format('truetype');
+}
+
+/* 
+#bgimg3 {
+    background-image: url("hog1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale: 100%;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    text-decoration-color: white;
+    filter: blur(2px); 
+ }  */
+/* #headimg{ */
+/* background: url('High_resolution_wallpaper_background_ID_77700615769-PhotoRoom.jpg'); */
+/* width: 100%; */
+/* height: 2%;
+    position: absolute; */
+/* filter: blur(2px); */
+/* top:5%;
+    left: 25%; */
+/* } */
+.text-overlay-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'HarryPotter', sans-serif;
+}
+
+.text-overlay-2 {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'HarryPotter', sans-serif;
+}
+
+.text-overlay-3 {
+    position: absolute;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'HarryPotter', sans-serif;
+}
+
+.text-overlay-4 {
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'HarryPotter', sans-serif;
+}
+
+.text-overlay h1 {
+    /* top: 50%;
+    left: 50%; */
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'HarryPotter', sans-serif;
+}
+
+
+.hoverable {
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: absolute;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    text-transform: translateZ(0);
+    transition-duration: .3s;
+    transition-property: transform;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.hoverable:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.hoverable:hover,
+.hoverable:active,
+.hoverable:focus {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.hoverable:hover:before,
+.hoverable:active:before,
+.hoverable:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+
+
+@keyframes bounce-animation {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+}
+
+
+
+/*everything below here is just setting up the page, so dont worry about it */
+
+
+@media (min-width: 768px) {
+    .navbar {
+        text-align: center !important;
+        float: none;
+        display: inline-block;
+    }
+    .menu-icon {
+    display: block;
+  }
+}
+
+
+body {
+    background-color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+    text-align: center !important;
+    color: white;
+}
+
+nav {
+    background: none !important;
+    text-transform: uppercase;
+    font-family: 'HarryPotter', sans-serif;
+}
+
+nav li {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.menu-icon {
+    display: none;
+}
+
+nav li a {
+    transition: .5s color ease-in-out;
+    text-decoration-color: white;
+    display: flex;
+    margin-left: 80%;
+    margin-right: 5%;
+}
+
+.page-title {
+    opacity: .75 !important;
+}

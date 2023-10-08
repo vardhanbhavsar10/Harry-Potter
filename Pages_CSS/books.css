@@ -1,0 +1,297 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Other header styles here */
+}
+
+.hoverable {
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    /* text-tranform: translateZ(0); */
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-property: transform;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: large;
+}
+
+.hoverable:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    /* W3C */
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.hoverable:hover,
+.hoverable:active,
+.hoverable:focus {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.hoverable:hover:before,
+.hoverable:active:before,
+.hoverable:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+
+
+@keyframes bounce-animation {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+}
+
+
+
+/*everything below here is just setting up the page, so dont worry about it */
+
+
+@media (min-width: 768px) {
+    .navbar {
+        text-align: center !important;
+        float: none;
+        display: inline-block;
+    }
+}
+
+body {
+    background-color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+    text-align: center !important;
+    color: white;
+    background: url('../Images/High_resolution_wallpaper_background_ID_77700615769-PhotoRoom.jpg');
+    background-repeat: none;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'HarryPotter';
+    src: url('../harry_p/WizardWorldSimplified-Kxr7.ttf') format('truetype');
+}
+
+nav {
+    background: none !important;
+    text-transform: uppercase;
+    font-family: 'HarryPotter', sans-serif;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 15%;
+    gap: 25px;
+    padding-block: 50px;
+}
+
+nav li {
+    margin-left: 50px;
+    margin-right: 3em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 8%;
+}
+
+nav li a {
+    transition: .5s color ease-in-out;
+    text-decoration-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 15%;
+    margin-left: 110px;
+    margin-right: 3em;
+}
+
+.page-title {
+    opacity: .75 !important;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 910px;
+}
+
+.choose {
+    width: 100%;
+    height: 40px;
+}
+
+.fa {
+    margin-right: 20px;
+    font-size: 30px;
+    color: gray;
+    float: right;
+}
+
+/******************************************
+  Book stuff
+  *******************************************/
+
+.book {
+    display: inline-block;
+    width: 260px;
+    height: 420px;
+    /* box-shadow: 0 0 8px #aaa;s */
+    margin: 25px;
+    padding: 10px 10px 10px 10px;
+    vertical-align: top;
+    transition: height 1s;
+    padding: 5px;
+    /* background-color: rgb(204, 204, 204); */
+}
+
+/* star button */
+.book:after {
+    /* font-family: ; */
+    /* content: "\f006"; */
+    font-size: 25px;
+    position: relative;
+    left: -.1cm;
+    top: -1.6cm;
+    bottom: -.5cm;
+    float: right;
+}
+
+.cover {
+    border: 2px solid gray;
+    height: 80%;
+    overflow: hidden;
+}
+
+.cover img {
+    width: 100%;
+}
+
+.book p {
+    /* margin-top: 12px; */
+    font-family: 'HarryPotter';
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-decoration-color: white;
+}
+
+.book .author {
+    font-size: 15px;
+}
+
+@media (max-width: 941px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .book {
+        margin: 49px;
+    }
+}
+
+@media (max-width: 730px) {
+    .book {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+}
+
+/*********************************
+  other
+  **********************************/
+
+h1 {
+    color: gray;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: -3px;
+}
+
+/**********************************
+  display change
+  ***********************************/
+/*book height smaller, cover opacity, move text onto cover and star too
+  animate it */
+#list-th:target .book {
+    height: 100px;
+    width: 250px;
+    padding: 10px;
+    margin: 25px auto 25px auto;
+}
+
+#list-th:target .cover {
+    width: 246px;
+}
+
+#list-th:target img {
+    opacity: .1;
+}
+
+#list-th:target p {
+    margin-top: -62px;
+    margin-left: 20px;
+}
+
+/* remove button? */
+#large-th:target .book {
+    height: 390px;
+}
+
+.title {
+   color: rgb(233, 224, 224);
+   text-decoration: none;
+
+}
+
+/***********************************
+  star animation
+  ***********************************/
+/***********************************
+  zoom on click
+  ***********************************/
